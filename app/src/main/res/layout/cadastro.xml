@@ -5,16 +5,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/bluePrimary">
 
+    <!--
     <ImageView
         android:id="@+id/logo"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginStart="150dp"
         android:src="@drawable/logo_final"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toEndof="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
+    -->
 
     <EditText
         android:id="@+id/name"

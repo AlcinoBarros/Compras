@@ -32,21 +32,17 @@
             app:layout_constraintStart_toEndOf="@+id/tarefasChecbox"
             app:layout_constraintTop_toTopOf="@+id/tarefasChecbox" />
 
-        <ImageButton
-            android:id="@+id/btnEditarTarefa"
+        <ImageView
+            android:id="@+id/btn_editarTarefa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_marginEnd="4dp"
-            android:layout_toEndOf="@+id/tarefasChecbox"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp"
             android:src="@drawable/editar_tarefa"
             app:layout_constraintBottom_toBottomOf="@+id/tarefasChecbox"
             app:layout_constraintEnd_toStartOf="@+id/btnDeletarTarefa"
-            app:layout_constraintTop_toTopOf="@+id/tarefasChecbox" />
+            app:layout_constraintTop_toTopOf="@+id/tarefasChecbox"
+            app:tint="@color/blueSecunt" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/btnDeletarTarefa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,16 +50,18 @@
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
             android:src="@drawable/deletar_tarefa"
+            app:tint="@color/blueSecunt"
             app:layout_constraintBottom_toBottomOf="@+id/tarefasChecbox"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tarefasChecbox" />
 
         <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/materialDivider"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:backgroundTint="@color/black"
-            app:layout_constraintTop_toBottomOf="@+id/tarefasChecbox"/>
+            app:layout_constraintTop_toBottomOf="@+id/tarefasChecbox" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -91,7 +89,7 @@
             app:layout_constraintStart_toEndOf="@+id/tarefasChecbox2"
             app:layout_constraintTop_toTopOf="@+id/tarefasChecbox2" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/btnEditarTarefa2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -101,11 +99,12 @@
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
             android:src="@drawable/editar_tarefa"
+            app:tint="@color/blueSecunt"
             app:layout_constraintBottom_toBottomOf="@+id/tarefasChecbox2"
             app:layout_constraintEnd_toStartOf="@+id/btnDeletarTarefa2"
             app:layout_constraintTop_toTopOf="@+id/tarefasChecbox2" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/btnDeletarTarefa2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -113,6 +112,7 @@
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
             android:src="@drawable/deletar_tarefa"
+            app:tint="@color/blueSecunt"
             app:layout_constraintBottom_toBottomOf="@+id/tarefasChecbox2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tarefasChecbox2" />
@@ -149,7 +149,7 @@
             app:layout_constraintStart_toEndOf="@+id/tarefasChecbox3"
             app:layout_constraintTop_toTopOf="@+id/tarefasChecbox3" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/btnEditarTarefa3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -159,11 +159,12 @@
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
             android:src="@drawable/editar_tarefa"
+            app:tint="@color/blueSecunt"
             app:layout_constraintBottom_toBottomOf="@+id/tarefasChecbox3"
             app:layout_constraintEnd_toStartOf="@+id/btnDeletarTarefa3"
             app:layout_constraintTop_toTopOf="@+id/tarefasChecbox3" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/btnDeletarTarefa3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -171,6 +172,7 @@
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
             android:src="@drawable/deletar_tarefa"
+            app:tint="@color/blueSecunt"
             app:layout_constraintBottom_toBottomOf="@+id/tarefasChecbox3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tarefasChecbox3" />
@@ -185,4 +187,3 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
-

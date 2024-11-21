@@ -2,6 +2,7 @@ package com.alcinojose.compras
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -10,12 +11,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.alcinojose.compras.Model.AdicionarItemFragment
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var tarefasRecyclerview: RecyclerView;
+    private lateinit var tarefasRecyclerview: RecyclerView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,17 +28,22 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        supportActionBar?.hide();
+        supportActionBar?.hide()
 
         tarefasRecyclerview = findViewById(R.id.tarefasRecyclerView)
-        tarefasRecyclerview.setLayoutManager( LinearLayoutManager(this));
+        tarefasRecyclerview.setLayoutManager( LinearLayoutManager(this))
 
         val fab: FloatingActionButton = findViewById(R.id.addTarefa)
 
-        fab.setOnClickListener{
-            val intent = Intent(this, AdicionarItemFragment::class.java)
+        fab.setOnClickListener(View.OnClickListener(){
+            val intent = Intent(this, NovaTarefa::class.java)
             startActivity(intent)
-        }
+        })
+
+//        fab.setOnClickListener(){
+//            val intent = Intent(this, NovaTarefa::class.java)
+//            startActivity(intent)
+//        }
 
     }
 

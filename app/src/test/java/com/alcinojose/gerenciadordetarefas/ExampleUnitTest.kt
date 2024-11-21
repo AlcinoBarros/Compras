@@ -1,4 +1,4 @@
-package com.alcinojose.compras
+package com.alcinojose.gerenciadordetarefas
 
 import org.junit.Test
 

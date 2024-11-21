@@ -1,16 +1,14 @@
-package com.alcinojose.compras
+package com.alcinojose.gerenciadordetarefas
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.EditText
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.alcinojose.compras.Model.AdicionarItemFragment
+import com.alcinojose.gerenciadordetarefas.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
@@ -36,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         val fab: FloatingActionButton = findViewById(R.id.addTarefa)
 
         fab.setOnClickListener{
-            val intent = Intent(this, AdicionarItemFragment::class.java)
+            val intent = Intent(this, NovaTarefa::class.java)
             startActivity(intent)
         }
 

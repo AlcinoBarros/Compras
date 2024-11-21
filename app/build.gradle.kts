@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.alcinojose.compras"
+    namespace = "com.alcinojose.gerenciadordetarefas"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.alcinojose.compras"
+        applicationId = "com.alcinojose.gerenciadordetarefas"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

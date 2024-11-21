@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Compras</string>
+    <string name="app_name">Gerenciador de Tarefas</string>
     <string name="lista_de_compras">Lista de Compras</string>
     <string name="login">Login</string>
     <string name="password">Password</string>

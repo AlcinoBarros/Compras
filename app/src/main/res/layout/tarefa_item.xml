@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/tarefaItem"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/item1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <CheckBox
+                android:id="@+id/tarefasChecbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:buttonTint="@android:color/holo_green_dark"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Feijão"
+                app:layout_constraintBottom_toBottomOf="@+id/tarefasChecbox"
+                app:layout_constraintStart_toEndOf="@+id/tarefasChecbox"
+                app:layout_constraintTop_toTopOf="@+id/tarefasChecbox" />
+
+            <ImageView
+                android:id="@+id/btnEditarTarefa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/editar_tarefa"
+                app:layout_constraintBottom_toBottomOf="@+id/tarefasChecbox"
+                app:layout_constraintEnd_toStartOf="@+id/btnDeletarTarefa"
+                app:layout_constraintTop_toTopOf="@+id/tarefasChecbox"
+                app:tint="@color/material_dynamic_secondary0" />
+
+            <ImageView
+                android:id="@+id/btnDeletarTarefa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:layout_marginEnd="16dp"
+                android:paddingStart="8dp"
+                android:src="@drawable/deletar_tarefa"
+                app:layout_constraintBottom_toBottomOf="@+id/tarefasChecbox"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tarefasChecbox"
+                app:tint="@color/material_dynamic_secondary0" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/tarefasChecbox"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>

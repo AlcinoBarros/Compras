@@ -3,8 +3,6 @@ package com.alcinojose.compras
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.EditText
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,6 +14,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 class MainActivity : AppCompatActivity() {
 
     private lateinit var tarefasRecyclerview: RecyclerView
+    private lateinit var adapter: ItemAdapter
+    private lateinit var itemList: MutableList<Item>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,8 +27,10 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
         supportActionBar?.hide()
+
+        itemList = ArrayList()
+        initData()
 
         tarefasRecyclerview = findViewById(R.id.tarefasRecyclerView)
         tarefasRecyclerview.setLayoutManager( LinearLayoutManager(this))
@@ -45,6 +47,15 @@ class MainActivity : AppCompatActivity() {
 //            startActivity(intent)
 //        }
 
+        adapter = ItemAdapter(itemList)
+        tarefasRecyclerview.setAdapter(adapter)
+
+    }
+    
+    private fun initData(){
+        for (i in 1<=...<=20){
+            itemList.add(Item("Titulo $i", "descricao $i"))
+        }
     }
 
 

@@ -14,9 +14,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:text="Lista de Compras"
+        android:text="Lista de Tarefas"
         android:textColor="@android:color/black"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:textSize="32sp" />
 
@@ -28,6 +27,7 @@
         android:layout_marginTop="15dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:nestedScrollingEnabled="true"
+        tools:listitem="@layout/item"
         />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

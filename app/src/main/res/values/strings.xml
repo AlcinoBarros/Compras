@@ -6,5 +6,6 @@
     <string name="cadastro">Cadastro</string>
     <string name="usuarios">usuario</string>
     <string name="name">nome</string>
+    <string name="hint_item">strin_item</string>
 
 </resources>

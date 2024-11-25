@@ -1,41 +1,38 @@
 package com.alcinojose.compras
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.safeDrawingPadding
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import com.alcinojose.compras.navigation.TodoNavHost
 
-class MainActivity : AppCompatActivity() {
-
-    private lateinit var button: Button
-
-
+class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
-        actionBar?.hide()
-        setupButton()
+        setContent {
+            Box(
+                modifier = Modifier
+                    .safeDrawingPadding()
+            ){
+
+                Compras {
+                    TodoNavHost()
+
+                }
+            }
 
         }
-
-    private fun setupButton() {
-        button = findViewById(R.id.btn_login)
-
-        button.setOnClickListener {
-
-            handleButtonClick()
-
-        }
-
     }
 
-    private fun handleButtonClick() {
-        val intent = Intent(applicationContext, LoginActivity::class.java)
-        startActivity(intent)
+    class Compras(function: @Composable () -> Unit) {
 
     }
 }
+
+
+

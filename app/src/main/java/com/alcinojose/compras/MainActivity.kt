@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
     }
     
     private fun initData(){
-        for (i in 1<=...<=20){
+        for (i in 1..20){
             itemList.add(Item("Titulo $i", "descricao $i"))
         }
     }

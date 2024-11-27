@@ -1,4 +1,10 @@
 package com.alcinojose.compras
 
-data class Item (val titulo: String, val descricao: String) {
+import java.io.Serializable
+
+data class Item (
+    val id: Int? = null,
+    val titulo: String,
+    val descricao: String
+) : Serializable {
 }
